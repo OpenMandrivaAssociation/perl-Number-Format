@@ -15,7 +15,6 @@ URL:		http://search.cpan.org/dist/%{module}
 Buildrequires:	perl-devel
 %endif
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Number::Format is a library for formatting numbers.  Functions are
