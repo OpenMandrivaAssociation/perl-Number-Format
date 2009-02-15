@@ -1,6 +1,6 @@
 %define module  Number-Format
 %define name    perl-%{module}
-%define version 1.63
+%define version 1.70
 %define release %mkrel 1
 
 Name:		%{name}
