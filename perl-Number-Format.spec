@@ -1,6 +1,6 @@
 %define module  Number-Format
 %define name    perl-%{module}
-%define version 1.70
+%define version 1.71
 %define release %mkrel 1
 
 Name:		%{name}
@@ -9,11 +9,8 @@ Release:	%{release}
 Summary:	Convert numbers to strings with pretty formatting
 License:	Artistic/GPL
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Number/%{module}-%{version}.tar.bz2
 URL:		http://search.cpan.org/dist/%{module}
-%if %{mdkversion} < 1010
-Buildrequires:	perl-devel
-%endif
+Source:     http://www.cpan.org/modules/by-module/Number/%{module}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
