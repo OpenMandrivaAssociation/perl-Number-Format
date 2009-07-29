@@ -1,18 +1,18 @@
-%define module  Number-Format
-%define name    perl-%{module}
-%define version 1.72
-%define release %mkrel 1
+%define upstream_name    Number-Format
+%define upstream_version 1.72
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Convert numbers to strings with pretty formatting
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Number/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Number/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Number::Format is a library for formatting numbers.  Functions are
@@ -25,7 +25,7 @@ separator come from the locale information or can be specified by the
 user.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 chmod 644 CHANGES README
 
 %build
@@ -47,4 +47,3 @@ rm -rf %{buildroot}
 %doc CHANGES README
 %{perl_vendorlib}/Number
 %{_mandir}/*/*
-
