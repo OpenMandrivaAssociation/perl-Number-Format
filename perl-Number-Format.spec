@@ -8,7 +8,7 @@ Release:	4
 Summary:	Convert numbers to strings with pretty formatting
 License:	Artistic/GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Number/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
