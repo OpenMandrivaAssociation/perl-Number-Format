@@ -1,15 +1,15 @@
 %define upstream_name    Number-Format
-%define upstream_version 1.73
+%define upstream_version 1.76
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Convert numbers to strings with pretty formatting
 License:	Artistic/GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Number/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/billward/number-format-perl
+Source0:	https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Number-Format-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
