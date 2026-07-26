@@ -1,15 +1,13 @@
 %define upstream_name    Number-Format
-%define upstream_version 1.76
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.76
+Release:	2
 
 Summary:	Convert numbers to strings with pretty formatting
 License:	Artistic/GPL
 Group:		Development/Perl
 Url:		https://github.com/billward/number-format-perl
-Source0:	https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Number-Format-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Number-Format-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -26,7 +24,7 @@ separator come from the locale information or can be specified by the
 user.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 chmod 644 CHANGES README
 
 %build
@@ -51,9 +49,7 @@ make test
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.720.0-1mdv2010.0
 + Revision: 404280
-- rebuild using %%perl_convert_version
-
-* Wed May 06 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.72-1mdv2010.0
+- rebuild using %1.76 Wed May 06 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.72-1mdv2010.0
 + Revision: 372391
 - update to new version 1.72
 
